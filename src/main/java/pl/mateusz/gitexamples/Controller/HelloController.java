@@ -18,8 +18,21 @@ private static final Logger Logger=LoggerFactory.getLogger(HelloController.class
         Logger.info("name: {}",name);
 
 
-        modelAndView.addObject("User",name);
+        modelAndView.addObject("user",name);
+
         modelAndView.setViewName("home");
+
+        return modelAndView;
+    }
+    @GetMapping("/data")
+    ModelAndView myFirstView(ModelAndView modelAndView,@RequestParam(defaultValue = "Karol")String name,@RequestParam(defaultValue ="Kowalski")String surname,@RequestParam(defaultValue = "35")int age){
+        Logger.info("name: {}",name);
+        Logger.info("surname: {}",surname);
+        Logger.info("age: {}",age);
+        modelAndView.addObject("name",name);
+        modelAndView.addObject("surname",surname);
+        modelAndView.addObject("age",age);
+        modelAndView.setViewName("data");
 
         return modelAndView;
     }
