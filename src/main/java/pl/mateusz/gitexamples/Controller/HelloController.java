@@ -56,6 +56,7 @@ private static final Logger Logger=LoggerFactory.getLogger(HelloController.class
         modelAndView.addObject("allUsers",users);
         modelAndView.addObject("nowa=akcja","jeszcze nie wiem ");
         modelAndView.setViewName("hello/users");
+        modelAndView.addObject("new-attribute","empty");
 
 
         return modelAndView;
