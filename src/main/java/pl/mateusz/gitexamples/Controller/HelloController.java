@@ -54,6 +54,7 @@ private static final Logger Logger=LoggerFactory.getLogger(HelloController.class
         Logger.info("user from db [{}]",users);
 
         modelAndView.addObject("allUsers",users);
+        modelAndView.addObject("nowa=akcja","jeszcze nie wiem ");
         modelAndView.setViewName("hello/users");
 
 
